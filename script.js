@@ -1,29 +1,25 @@
 const btns = document.querySelectorAll(".buttons > button");
+const btnSet = document.querySelector(".buttons");
 const texts = document.querySelectorAll(".texts p");
+const textBorder = document.querySelector(".texts");
+const addBtn = document.querySelector(".input");
 
-btns.forEach((btn) => {
+let aBtn = document.createElement("button");
+aBtn.classList.add("pink");
+aBtn.textContent = "pink";
+let btnss = Array.from(btns);
+btnSet.appendChild(aBtn);
+btnss.push(aBtn);
+console.log(btnss);
+
+btnss.forEach((btn) => {
   let elClass = btn.className;
+  btn.style.backgroundColor = `${elClass}`;
 
-  btn.addEventListener("mouseover", () => {
-    btn.style.backgroundColor = `${elClass}`;
-
+  btn.addEventListener("click", () => {
     texts.forEach((p) => {
-      let pClass = p.className;
-      // changing color of p with its classname
-      if (pClass == elClass) {
-        p.style.color = `${pClass}`;
-      }
-
-      //   changing color of the whole text with btn's classname
-      if (elClass == "yellow") {
-        alert(
-          "Yellow is difficult to be seen with light bg, so I made it look black"
-        );
-        p.style.color = "black";
-        elClass = "black";
-      } else {
-        p.style.color = `${elClass}`;
-      }
+      p.style.color = `${elClass}`;
     });
+    textBorder.style.borderColor = `${elClass}`;
   });
 });
