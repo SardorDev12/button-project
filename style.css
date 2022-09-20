@@ -1,0 +1,48 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: antiquewhite;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin: 3rem 0;
+  color: brown;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  padding: 1rem;
+  margin: 1rem 15rem;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px white;
+}
+
+.buttons > button {
+  padding: 0.3rem 1rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  border: 2px solid white;
+  box-shadow: 0 0 10px white;
+  border-radius: 6px;
+  background-color: white;
+}
+.texts {
+  border: 1px solid red;
+  margin: 0 10rem;
+  padding: 1rem;
+  font-family: sans-serif;
+}
+
+.texts > p {
+  margin: 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
